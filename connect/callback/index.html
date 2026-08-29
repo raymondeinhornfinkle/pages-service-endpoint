@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; connect-src 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self' data:; object-src 'none'; script-src 'self'; style-src 'self'; upgrade-insecure-requests">
+    <meta name="referrer" content="no-referrer">
+    <title>Authorization Callback</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="./callback.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="content-card">
+        <p class="eyebrow">Authorization Callback</p>
+        <h1>Copy this redirect URL into Codex.</h1>
+        <p class="lead">
+          This page reads the URL in your browser only. It does not send the
+          code, state, or any user data to a server.
+        </p>
+
+        <div class="callback-panel">
+          <pre class="callback-url" id="callback-url">Waiting for callback URL...</pre>
+          <button class="copy-button" id="copy-button" type="button">
+            Copy full callback URL
+          </button>
+        </div>
+
+        <div class="field-list" aria-label="Callback fields">
+          <div class="field">
+            <strong>Authorization code</strong>
+            <code id="code-field">Waiting</code>
+          </div>
+          <div class="field">
+            <strong>State</strong>
+            <code id="state-field">Waiting</code>
+          </div>
+          <div class="field">
+            <strong>Error</strong>
+            <code id="error-field">Waiting</code>
+          </div>
+        </div>
+
+        <p class="warning">
+          Paste only the full callback URL into the local Codex task that
+          started the authorization. Do not paste passwords, MFA codes, access
+          tokens, refresh tokens, or private records here.
+        </p>
+
+        <div class="action-row">
+          <a class="secondary-link" href="../terms/">Terms and data use</a>
+          <a class="secondary-link" href="../../">Home</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
